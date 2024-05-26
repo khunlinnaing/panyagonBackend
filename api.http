@@ -1,0 +1,89 @@
+POST http://localhost:9000/api/auth/register
+Content-Type: application/json
+
+{
+    "name": "mg mg",
+    "image": "",
+    "email": "df@j.v",
+    "phone": "a",
+    "address":"a",
+    "password":"admin12345",
+    "confirm_password":"admin12345"
+}
+
+###
+POST http://localhost:9000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password":"admin12345"
+}
+
+###
+POST http://localhost:9000/api/auth/logout
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwiaWF0IjoxNzE2NjIwOTU2fQ.Rz0hf7Wned337bVCSPih7e_qsG_5J7rCVD0wfAqAzmQ"
+}
+
+
+###
+PUT http://localhost:9000/api/auth/vertification?code=7465
+
+###
+GET http://localhost:9000/api/user
+token : token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiaWF0IjoxNzE2NjE5MzYxfQ.OcgDYM_iAGC4RLNDF2gHQBG55GQVdFZUeGl-7y25Pqs
+
+###
+GET http://localhost:9000/api/user/detail?id=7
+Content-Type: application/json
+token : token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiaWF0IjoxNzE2NDU3NjM0fQ.GjhqvKChIN5-TV2QgYkppqEA5ugDZooJYVEkOZYk4l4
+
+
+###
+PUT http://localhost:9000/api/user
+{
+    "id":"1",
+    "name": "a",
+    "image": "",
+    "email": "khunlinnaingoo90@gmail.com",
+    "phone": "0989098008",
+    "address":"the",
+    "password":"admin12345",
+    "confirm_password":"admin12345"
+}
+
+###
+DELETE http://localhost:9000/api/user?id=6
+
+# Category
+####
+POST http://localhost:9000/api/category
+Content-Type: application/json
+
+{
+    "name" : "clothes one",
+    "user_id" : "9"
+}
+
+
+###
+GET http://localhost:9000/api/category
+
+###
+GET http://localhost:9000/api/category/detail?id=2
+
+###
+PUT http://localhost:9000/api/category
+Content-Type: application/json
+
+{
+    "name" : "clothes1",
+    "user_id" : "9",
+    "id" : 2
+}
+
+###
+DELETE http://localhost:9000/api/category?id=2
